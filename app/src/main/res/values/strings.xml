@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Tours</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="this_is_splash_activity">This is Splash Activity</string>
+    <string name="this_is_main_activity">This is Main Activity</string>
+    <string name="geofence_activity">GeoFence Activity</string>
+</resources>

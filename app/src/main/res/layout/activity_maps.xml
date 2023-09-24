@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.fragment.app.FragmentContainerView
+
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="409dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/addressTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MapsActivity"
+        tools:layout="@layout/support_simple_spinner_dropdown_item" />
+
+    <TextView
+        android:id="@+id/addressTV"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:background="#00703E"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        android:text="Loading address..."
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/addressCheckBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/addressCheckBox"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/wt_green"
+        android:backgroundTint="@color/wt_green"
+        android:checked="true"
+        android:onClick="showAddress"
+        android:text="Show Addresses"
+        android:textColor="@color/white"
+        android:textColorHighlight="#CAC3C3"
+        android:textColorLink="#FFFFFF"
+        app:buttonIconTintMode="add"
+        app:checkedState="checked"
+        app:layout_constraintBottom_toTopOf="@+id/geofencesCheckBox"
+        app:layout_constraintEnd_toStartOf="@+id/divider2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/travelPathCheckBox"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/wt_green"
+        android:backgroundTint="@color/wt_green"
+        android:checked="true"
+        android:onClick="showTravelPath"
+        android:text="Show Travel Path"
+        android:textColor="@color/white"
+        android:textColorHighlight="#CAC3C3"
+        android:textColorLink="#FFFFFF"
+        app:buttonIconTintMode="add"
+        app:checkedState="checked"
+        app:layout_constraintBottom_toTopOf="@+id/tourPathCheckBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divider2" />
+
+    <CheckBox
+        android:id="@+id/geofencesCheckBox"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/wt_green"
+        android:backgroundTint="@color/wt_green"
+        android:checked="true"
+        android:onClick="showGeofence"
+        android:text="Show Geofences"
+        android:textColor="@color/white"
+        android:textColorHighlight="#CAC3C3"
+        android:textColorLink="#FFFFFF"
+        app:buttonIconTintMode="add"
+        app:checkedState="checked"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divider2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/tourPathCheckBox"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/wt_green"
+        android:backgroundTint="@color/wt_green"
+        android:checked="true"
+        android:onClick="showTourPath"
+        android:text="Show Tour Path"
+        android:textColor="@color/white"
+        android:textColorHighlight="#CAC3C3"
+        android:textColorLink="#FFFFFF"
+        app:buttonIconTintMode="add"
+        app:checkedState="checked"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divider2" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/wt_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addressTV" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
